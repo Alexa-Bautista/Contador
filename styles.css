@@ -1,0 +1,194 @@
+/* Resetear los valores que vienen por defecto con el navegador */
+/* m0 => m  equivale a margin 0 equivale al valor en px (p0)  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+}
+
+body {
+    min-height: 100vh;
+    /* display: flex; "Flex= Hace que se comporten de acuerdo a las reglas del padre" */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: green; */
+}
+
+.mainContainer {
+    background-color: #1971c2;
+    font-size: 20px;
+    width: 60%;
+    border-radius: 40px;
+    display: flex;
+    /* display: flex; Ordena en filas */
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* gap: 15px; SOLO FUNCIONA CON FLEX || GRID Crea una separación entre todos los div hijos (Es parecido a crear un margin entre cada uno de los hijos, al hacerlo acá minimiza codigo) */
+    /* flex-direction: column; NO FUNCIONA si no esta el display flex Organizar a los elementos en columnas */
+    /* margin: 0 auto; */
+    /* width: 350px;  */
+    /* width: 50vw; VW= Se emplea con respecto al ancho de la pantalla   */
+    /* width: 60%; %= Se emplea con respecto al ancho del contenedor padre */
+    /* em= hace referencia al tamaño del font size del elemento actual tamaño de la fuente por la cantidad que se le estipula al em "ej= font-size 20px ... 2em ... 20px * 2 =40px  */
+    /* width: 17em; */
+    /* no se mide con el tamaño de la fuente actual, sino con el elemento raiz es decir HTML */
+    /* width: 21rem; */
+}
+
+
+h1 {
+    font-size: 25px;
+    text-align: center;
+}
+
+.inputsContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.inputPlayer{
+    width: 30%;
+    padding: 5px;
+    /* font-size: 65%;     */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgba(212, 212, 212, 0.564);
+    border-color: rgba(208, 208, 208, 0.212);
+}
+
+::placeholder{
+    text-wrap: wrap;
+    text-align: center;
+    font-size: 14px;
+    color: black;
+}
+
+.mainCount {
+    /* background-color: red; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.countResult{
+    background-color: #b2f2bbec;
+    width: 165px;
+    height: 165px ;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 2px green dotted
+}
+
+/*  */
+.countResult> .inputPlayer {
+    width: 60%;
+    background-color: rgba(112, 233, 129, 0.564);
+    border-color: rgba(208, 208, 208, 0.212);
+}
+
+#result{
+    font-size: 40px;
+}
+
+.countPlayers{
+    /* background-color: blueviolet; */
+    display: flex;
+    gap: 20px;
+}
+
+.countPlayer{
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.btnAdd{
+    background-color: rgb(172, 255, 47);
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 2px green solid;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 30px;
+    /* border-color: forestgreen;
+    border-width: 30px; */
+    /* El borde recibe 3 propiedades... ancho, color, tipo de linea NO IMPORTA EL ORDEN */    
+}
+
+#btnResta{
+    background-color: rgb(255, 0, 0);
+    border: solid 2px rgba(112, 112, 112, 0.518);
+}
+
+.resultplayer{
+    font-size: 12px;
+}
+
+.btnReset{
+    background-color: rgb(194, 194, 194);
+    width: 80px;
+    height: 25px;
+    border-radius: 30px;
+    border: grey 1px solid;
+    color: black;
+    font-size: 15px;
+}
+
+.modal{
+    background-color: rgba(35, 207, 230, 0.418);
+    backdrop-filter: blur(10px);
+    width: 80%;
+    height: 200px;
+    position: absolute;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.modal> p{
+    font-size: 30px;
+    text-align: center;
+}
+
+.modal> span{
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    background-color: red;
+    border-radius: 100%;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px #b3030383 solid;
+}
+
+.hidden{
+    display: none;
+
+}
